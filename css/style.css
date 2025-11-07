@@ -13,6 +13,7 @@ h4,
 h5,
 h6,
 li,
+a,
 input,
 button,
 textarea,
@@ -27,8 +28,8 @@ a {
 }
 h1 {
   font-family: "Unbounded", sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 800;
+  /* line-height: 1.2; */
 }
 
 html, body {
@@ -46,14 +47,28 @@ main {
     height: 100%;
 }
 
-marque {
-  background-color: #000000;
+.marque-container {
   width: 100%;
   height: 38px;
+
+  /* padding: 10px; */
 }
-marque h2 {
-    font-size: 1.2rem;
+.marque-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    padding:10px,
+
+}
+
+
+
+.marque-content p {
+    font-size: 16px;
     color: #fff;
+    margin: 1rem;
 }
 
 header{
@@ -78,6 +93,16 @@ nav ul li {
     margin: 0 1rem;
 }
 
+nav ul li a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover {
+    color: #8e8888;
+    text-decoration: underline;
+}
 button{
     border: none;
     background-color: transparent;
@@ -176,18 +201,15 @@ header {
 .single-product {
     display: flex;
     flex-direction: column;
-    /* width:'100%'; */
-    /* max-width:295px; */
-    /* background-color: red; */
+    width: 295px;
+}
 
+.product-image  {
+    width: 295px;
+    height: 298px;
+    border-radius: 20px;
+    border: 1px solid #f0eeed;
+    background-color: #f0eeed;
+    padding: 16px;
+}
 
-}
-.product-image img {
-    border-radius: 50px;
-    border: 1px solid #000000;
-}
-.single-product .product-image {
-    /* width:'100%'; */
-    max-width: 29px;
-    height: 29px;
-}
