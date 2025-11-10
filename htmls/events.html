@@ -3,25 +3,91 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Events - JSFSHOP</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="events">
-  <marquee>🎫 Tickets open for Winter Glam Show. Reserve your seat now!</marquee>
-  <div id="site-nav"></div>
-
-  <div class="container">
-    <h2>Upcoming Events</h2>
-    <div class="event-list">
-      <div class="event">
-        <strong>Winter Glam Show</strong> — December 15, 2025<br>
-        Venue: Grand Hall, City Center • Tickets: ₦5,000
+  <main>
+    <header>
+      <button class="menu-btn">
+        <img src="../assets/images/icons/menu.svg" alt="Bars">
+      </button>
+      <h1 class="logo">JSFSHOP</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="board-trustees.html">Board of Trustee</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <button> <img src="../assets/images/icons/search.svg" alt="Search"></button>
+        <button> <img src="../assets/images/icons/cart.svg" alt="Cart"></button>
+        <button> <img src="../assets/images/icons/account.svg" alt="User"></button>
       </div>
-      <div class="event">
-        <strong>Spring Collection Launch</strong> — March 20, 2026<br>
-        Venue: The Atelier • RSVP required
+    </header>
+
+    <marquee>🎫 Tickets open for Winter Glam Show. Reserve your seat now!</marquee>
+
+    <div class="container page">
+      <h2>Upcoming Events</h2>
+      <div class="event-list">
+        <div class="event">
+          <strong>Winter Glam Show</strong> — December 15, 2025<br>
+          Venue: Grand Hall, City Center • Tickets: ₦5,000
+        </div>
+        <div class="event">
+          <strong>Spring Collection Launch</strong> — March 20, 2026<br>
+          Venue: The Atelier • RSVP required
+        </div>
       </div>
     </div>
-  </div>
+
+    <footer>
+      <div>
+        <h1>JFSHOP</h1>
+        <p>We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <h3>Company</h3>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="appointments.html">Board of Trustee</a></li>
+        </ul>
+        <ul>
+          <h3>Help</h3>
+          <li><a href="about.html">Customer Support</a></li>
+          <li><a href="about.html">Shipping & Returns</a></li>
+          <li><a href="contact.html">Terms & Conditions</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>JFSHOP.co © 2000 - 2025, All Rights Reserved</p>
+      </div>
+    </footer>
+  </main>
+  <script>
+    (function() {
+      const menuBtn = document.querySelector('.menu-btn');
+      const nav = document.querySelector('nav');
+      if (!menuBtn || !nav) return;
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.setAttribute('aria-label', 'Toggle navigation');
+      menuBtn.addEventListener('click', function() {
+        const isOpen = nav.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+      nav.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A' && nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
