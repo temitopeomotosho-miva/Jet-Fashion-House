@@ -26,6 +26,7 @@ div {
 a {
     text-decoration: none;
 }
+
 h1 {
   font-family: "Unbounded", sans-serif;
   font-weight: 800;
@@ -82,6 +83,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
+  justify-items: center;
 }
 
 @media (min-width: 808px) {
@@ -91,10 +93,20 @@ main {
 }
 
 .event {
-  background: #fff;
-  border: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* background: #fff; */
+  /* border: 1px solid #e5e5e5; */
   border-radius: 12px;
   padding: 16px;
+}
+.event img {
+  width: 358px;
+  height: 308px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 /* Contact page */
@@ -184,35 +196,11 @@ form button[type="submit"],
   font-weight: 700;
 }
 
-.marque-container {
-  width: 100%;
-  height: 38px;
-
-  /* padding: 10px; */
-}
-.marque-content {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000;
-    padding: 8px 12px;
-    gap: 8px;
-
-}
 
 
 
-.marque-content p {
-    font-size: 14px;
-    color: #fff;
-    margin: 0;
-    letter-spacing: 0.2px;
-}
-/* Ensure custom tag renders nicely */
-marque.marque-container { display: block; }
 
-/* Style native marquee tag used on other pages */
+
 marquee {
   display: block;
   background: #000;
@@ -221,7 +209,7 @@ marquee {
   font-size: 14px;
 }
 
-header{
+header  {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -234,11 +222,10 @@ nav {
     align-items: center;
 }
 
-/* Mobile menu open state */
 nav.open {
     display: flex;
     position: absolute;
-    top: 64px; /* header height */
+    top: 64px; 
     left: 0;
     right: 0;
     background-color: #fff;
@@ -423,6 +410,13 @@ header {
     max-width: 296px;
 }
 
+
+.single-product h3 a {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000000;
+    /* text-decoration: none; */
+}
 .product-image  {
     width: 295px;
     height: 298px;
@@ -448,7 +442,7 @@ header {
 footer {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 140px;
     padding: 24px 16px;
     background-color: #000000;
     color: #fff;
@@ -481,3 +475,65 @@ ul li  {
     justify-content: center;
     align-items: center;
 }
+
+
+.board-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (min-width: 808px) {
+  .board-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.board-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.board-item h3 {
+  margin: 8px 0 4px;
+}
+
+.board-item p {
+  margin: 0;
+}
+
+
+.board-card img {
+  object-fit: cover;
+  border-radius: 20px;
+}
+.board-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+}
+.board-card p a {
+  font-size: 12px;
+  font-weight: 400;
+  color: #8e8888;
+}
+
+
+@media (min-width: 808px) {
+    .board-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+}
+
+
+
+/* .contact-card {
+    display: flex;
+    flex-direction: column;
+    width: 358px;
+    max-width: 358px;
+} */

@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Appointment - JSFSHOP</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Contact - JSFSHOP</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body class="appointments">
+<body class="contact">
   <main>
     <header>
       <button class="menu-btn">
@@ -28,25 +28,33 @@
       </div>
     </header>
 
-    <marquee>💬 Book a private appointment — we’ll tailor a look just for you!</marquee>
+    <marquee>📍 Visit us: 12 Fashion Ave • For press & collaborations contact our team.</marquee>
 
-    <div class="container page">
-      <h2>Inquiries & Appointment</h2>
-      <div class="appointment-card">
-        <form id="appointment-form">
-          <label>Full Name</label><br>
-          <input type="text" name="name" placeholder="Your full name" required><br><br>
-
-          <label>Email</label><br>
-          <input type="email" name="email" placeholder="you@example.com" required><br><br>
-
-          <label>Message</label><br>
-          <textarea name="message" rows="5" placeholder="Tell us about your request..." required></textarea><br><br>
-
-          <button type="submit">Send Inquiry</button>
-        </form>
-      </div>
+    <div class="container contact-grid page">
+    
+    <div>
+      <h2>Contact</h2>
+      <p>Email: Hello@jsfshop.com<br>Phone: +234 8100 100 000</p>
+      <p>Follow us: Instagram / Twitter / Facebook</p>
     </div>
+
+    <aside class="contact-card">
+      <h3>Quick Message</h3>
+      <form>
+        <input placeholder="Your name"><br><br>
+        <input placeholder="Email"><br><br>
+        <textarea rows="4" placeholder="Message"></textarea><br><br>
+        <button type="button" onclick="alert('Send Email!!')">Send</button>
+      </form>
+    </aside>
+
+
+    
+    </div>
+
+
+
+
 
     <footer>
       <div>
