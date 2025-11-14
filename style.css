@@ -479,14 +479,26 @@ ul li  {
 
 .board-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
   gap: 16px;
   align-items: start;
 }
 
+@media (min-width: 508px) {
+.board-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 908px) {
+.board-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media (min-width: 808px) {
   .board-list {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
