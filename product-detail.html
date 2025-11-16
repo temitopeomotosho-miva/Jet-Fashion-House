@@ -279,24 +279,6 @@
       </div>
     </footer>
   </main>
-  <script>
-    (function() {
-      const menuBtn = document.querySelector('.menu-btn');
-      const nav = document.querySelector('nav');
-      if (!menuBtn || !nav) return;
-      menuBtn.setAttribute('aria-expanded', 'false');
-      menuBtn.setAttribute('aria-label', 'Toggle navigation');
-      menuBtn.addEventListener('click', function() {
-        const isOpen = nav.classList.toggle('open');
-        menuBtn.setAttribute('aria-expanded', String(isOpen));
-      });
-      nav.addEventListener('click', function(e) {
-        if (e.target.tagName === 'A' && nav.classList.contains('open')) {
-          nav.classList.remove('open');
-          menuBtn.setAttribute('aria-expanded', 'false');
-        }
-      });
-    })();
-  </script>
+    <script src="main.js"></script>
 </body>
 </html>
